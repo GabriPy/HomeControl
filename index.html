@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ciao</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+	<link rel="stylesheet" href="/index.css">
+
+	<script src="js/luci.js"></script>
+	<script src="js/stufa.js"></script>
+	<script src="js/particle.js"></script>
+
+</head>
+
+<body>
+	<div id="particles-js"></div>
+	<div class="columns centrato">
+		<div class="column"></div>
+		<div class="column is-4">
+			<article class="panel is-success">
+				<p class="panel-heading">
+					Camera Gabri
+				</p>
+				<a class="panel-block">
+					<span class="panel-icon">
+						<i onclick="luceOn()" class="fa-sharp fa-solid fa-lightbulb" style="color:green;"></i>
+					</span>
+					<span class="panel-icon">
+						<i onclick="luceOff()" class="fa-sharp fa-solid fa-lightbulb" style="color:red;"></i>
+					</span>
+					Luce
+				</a>
+				<a class="panel-block">
+					<span class="panel-icon">
+						<i onclick="stufaOn()" class="fa-solid fa-temperature-arrow-up" style="color:green;"></i>
+					</span>
+					<span class="panel-icon">
+						<i onclick="stufaOff()" class="fa-solid fa-temperature-arrow-up" style="color:red;"></i>
+					</span>
+					Stufa
+				</a>
+			</article>
+		</div>
+		<div class="column"></div>
+	</div>
+</body>
+</html>
+
+
+<script>
+
+	// LUCI
+	function luceOn(){
+		fetch("https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=a5e33adf-e70d-4c08-8e79-78a6aa7a81a5&token=997ee3be-79d9-4772-86d1-979ebe70beae&response=html", { mode: 'no-cors'}),
+		console.log("luceOn")
+	}
+
+	function luceOff(){
+		fetch("https://www.virtualsmarthome.xyz/url_routine_trigger/activate.php?trigger=1d41f322-8b21-41d6-aac7-ce273fe3fb08&token=adf9348f-9b7b-457b-9156-04679650a64c&response=html", { mode: 'no-cors'}),
+		console.log("luceOff")
+	}
+
+
+
+</script>
+
+<style type="text/css">
+	i {
+		font-size: 150% !important;
+	}
+	.panel-icon {
+		margin-right: 50px;
+	}
+	.centrato {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+	}
+
+</style>
