@@ -1,0 +1,52 @@
+li:hover {
+    background-color: #dfdfdf;
+}
+
+body {
+    background-color: #ADBCA5 !important;
+    user-select: none;
+}
+
+.primario {
+    background-color: #48c78e;
+    line-height: 300%;
+}
+
+.primario:hover {
+    background-color: #48c78e !important;
+}
+
+i {
+    font-size: 150% !important;
+    cursor: pointer;
+}
+
+.centrato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.testo-card {
+    /* font-weight: bold; */
+    font-size: 120%;
+}
+
+i {
+    margin-right: 20px
+}
+
+.verde {
+    color: green;
+}
+
+.rosso {
+    color: red;
+}
+
+.elemento1 {
+    position: absolute !important;
+    z-index: 1 !important;
+}
